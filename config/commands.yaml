@@ -1,0 +1,25 @@
+commands:
+  pipeline:
+    class: \Driver\Pipeline\Command
+  connect:
+    class: \Driver\Engines\MySql
+  check-filesystem:
+    class: \Driver\Engines\MySql\Check
+  start-sandbox:
+    class: \Driver\Engines\MySql\Sandbox\Init
+  export-data-from-system-primary:
+    class: \Driver\Engines\MySql\Export\Primary
+  import-data-into-sandbox:
+    class: \Driver\Engines\MySql\Sandbox\Import
+  export-data-from-sandbox:
+    class: \Driver\Engines\MySql\Sandbox\Export
+  upload-data-to-s3:
+    class: \Driver\Engines\S3\Upload
+  shutdown-sandbox:
+    class: \Driver\Engines\MySql\Sandbox\Shutdown
+  call-post-webhook:
+    class: \Driver\Commands\Webhook\PostCommand
+  setup-environment:
+    class: \Driver\Commands\Environment\Setup
+  run-transformations:
+    class: \Driver\Engines\MySql\Transformation

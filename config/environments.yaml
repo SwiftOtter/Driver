@@ -1,0 +1,4 @@
+environments:
+  default:
+    sort: 1
+    empty: true
